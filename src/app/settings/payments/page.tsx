@@ -22,7 +22,7 @@ const PaymentSubscriptions = () => {
   ]);
 
   const handleUpgrade = () => {
-    router.push("/dashboard/landlord/settings/plans");
+    router.push("/
   };
 
   const handleAddPaymentMethod = () => {

@@ -25,7 +25,7 @@ const TenantsPage = () => {
               <span className={`px-3 py-1 rounded-full text-white ${tenant.status === "Pending" ? "bg-yellow-500" : "bg-green-500"}`}>
                 {tenant.status}
               </span>
-              <Link href={`/dashboard/landlord/tenants/details?id=${tenant.id}`} className="ml-3 text-blue-600 underline">
+              <Link href={`/${tenant.id}`} className="ml-3 text-blue-600 underline">
                 View
               </Link>
             </div>

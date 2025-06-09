@@ -70,7 +70,7 @@ const ChatInterface= () => {
       
       <div className="p-6 bg-white shadow-md rounded-lg text-center">
         <p className="text-gray-600">No conversation selected.</p>
-        <Link href="/dashboard/landlord/messages">
+        <Link href="/messages">
           <button className="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg">Go Back</button>
         </Link>
       </div>
@@ -80,7 +80,7 @@ const ChatInterface= () => {
   return (
     <div className="bg-white p-6 shadow-md rounded-lg h-[80vh] flex flex-col">
       <div className="flex items-center justify-between mb-4">
-        <Link href="/dashboard/landlord/messages" className="flex items-center text-blue-600">
+        <Link href="/messages" className="flex items-center text-blue-600">
           <IoArrowBack size={24} />
           <span className="ml-2">Back</span>
         </Link>

@@ -9,7 +9,7 @@ const DeletePropertyPage = () => {
 
   const handleDelete = () => {
     alert(`Property ${propertyId} deleted successfully!`);
-    router.push("/dashboard/landlord/properties");
+    router.push("/properties");
   };
 
   return (

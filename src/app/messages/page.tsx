@@ -78,7 +78,7 @@ const MessagesPage = () => {
         {conversations.map((chat) => (
           <Link
             key={chat.id}
-            href={`/dashboard/landlord/messages/chat?id=${chat.id}`}
+            href={`/messages/chat?id=${chat.id}`}
             className="block p-4 bg-gray-100 rounded-lg shadow hover:bg-gray-200 transition"
           >
             <div className="flex justify-between items-center">

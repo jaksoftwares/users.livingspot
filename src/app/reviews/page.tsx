@@ -19,7 +19,7 @@ const ReviewsPage = () => {
             <h2 className="font-semibold">{tenant}</h2>
             <p className="text-yellow-500">{"⭐".repeat(rating)}</p>
             <p className="text-gray-700">{comment}</p>
-            <Link href={`/dashboard/landlord/reviews/respond?tenant=${tenant}`} className="text-blue-600 hover:underline mt-2 inline-block">
+            <Link href={`/reviews/respond?tenant=${tenant}`} className="text-blue-600 hover:underline mt-2 inline-block">
               Respond
             </Link>
           </div>

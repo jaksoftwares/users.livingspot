@@ -12,7 +12,7 @@ const StatusPage = () => {
 
   const handleUpdate = () => {
     alert(`Property ${propertyId} status updated to ${status}!`);
-    router.push("/dashboard/landlord/properties");
+    router.push("/properties");
   };
 
   return (

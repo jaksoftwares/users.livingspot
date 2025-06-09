@@ -36,12 +36,12 @@ const Sidebar = () => {
 
       {/* Navigation Links */}
       <nav className="mt-6 space-y-2">
-        <SidebarLink href="/dashboard/landlord" icon={<FaHome />} text="Dashboard" expanded={expanded} />
-        <SidebarLink href="/dashboard/landlord/properties" icon={<FaBuilding />} text="Properties" expanded={expanded} />
-        <SidebarLink href="/dashboard/landlord/messages" icon={<FaEnvelope />} text="Messages" expanded={expanded} />
-        <SidebarLink href="/dashboard/landlord/reviews" icon={<FaStar />} text="Reviews" expanded={expanded} />
-        <SidebarLink href="/dashboard/landlord/reports" icon={<FaFileAlt />} text="Reports" expanded={expanded} />
-        <SidebarLink href="/dashboard/landlord/settings" icon={<FaCog />} text="Settings" expanded={expanded} />
+        <SidebarLink href="/" icon={<FaHome />} text="Dashboard" expanded={expanded} />
+        <SidebarLink href="/properties" icon={<FaBuilding />} text="Properties" expanded={expanded} />
+        <SidebarLink href="/messages" icon={<FaEnvelope />} text="Messages" expanded={expanded} />
+        <SidebarLink href="/reviews" icon={<FaStar />} text="Reviews" expanded={expanded} />
+        <SidebarLink href="/reports" icon={<FaFileAlt />} text="Reports" expanded={expanded} />
+        <SidebarLink href="/settings" icon={<FaCog />} text="Settings" expanded={expanded} />
 
         {/* Logout Button */}
         <button className="flex items-center px-4 py-3 text-gray-700 hover:bg-red-500 hover:text-white w-full rounded transition">

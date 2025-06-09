@@ -69,7 +69,7 @@ const PropertiesPage = () => {
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-3xl font-bold text-gray-800">🏠 My Properties</h1>
         <Link
-          href="/dashboard/landlord/properties/add"
+          href="/properties/add"
           className="bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center hover:bg-blue-700 transition"
         >
           <Plus size={18} className="mr-2" /> Add Property
@@ -127,7 +127,7 @@ const PropertiesPage = () => {
 
               <div className="flex justify-between mt-4">
                 <Link
-                  href={`/dashboard/landlord/properties/edit?id=${property.id}`}
+                  href={`/properties/edit?id=${property.id}`}
                   className="bg-blue-500 text-white px-3 py-1 rounded-lg flex items-center hover:bg-blue-600 transition"
                 >
                   <Pencil size={16} className="mr-1" /> Edit

@@ -34,7 +34,7 @@ const TenantDetails = () => {
   const handleDecline = () => {
     setStatus("Declined");
     alert(`Tenant ${tenant.name} declined.`);
-    router.push("/dashboard/landlord/tenants");
+    router.push("/tenants");
   };
 
   return (

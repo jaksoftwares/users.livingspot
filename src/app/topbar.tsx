@@ -4,18 +4,21 @@ import { useState, useEffect } from "react";
 import { FaUserCircle, FaBell, FaSignOutAlt, FaCog } from "react-icons/fa";
 
 const Topbar = () => {
-  const [time, setTime] = useState(new Date());
+  const [time, setTime] = useState<Date | null>(null);
   const [isNotificationsOpen, setNotificationsOpen] = useState(false);
   const [isProfileOpen, setProfileOpen] = useState(false);
 
-  // Update time every second
+  // Update time every second after mount
   useEffect(() => {
-    const interval = setInterval(() => setTime(new Date()), 1000);
+    const updateTime = () => setTime(new Date());
+    updateTime(); // initialize once on mount
+
+    const interval = setInterval(updateTime, 1000);
     return () => clearInterval(interval);
   }, []);
 
-  // Get a dynamic greeting message
   const getGreeting = () => {
+    if (!time) return "";
     const hour = time.getHours();
     if (hour < 12) return "Good morning";
     if (hour < 18) return "Good afternoon";
@@ -26,8 +29,12 @@ const Topbar = () => {
     <div className="bg-white shadow-md p-4 flex justify-between items-center relative">
       {/* Left Side - Greeting & Time */}
       <div>
-        <h1 className="text-xl font-semibold text-gray-800">{getGreeting()}, Landlord!</h1>
-        <p className="text-gray-500 text-sm">{time.toLocaleTimeString()}</p>
+        <h1 className="text-xl font-semibold text-gray-800">
+          {getGreeting()}, Landlord!
+        </h1>
+        {time && (
+          <p className="text-gray-500 text-sm">{time.toLocaleTimeString()}</p>
+        )}
       </div>
 
       {/* Right Side - Notifications & Profile */}
@@ -42,7 +49,6 @@ const Topbar = () => {
             3
           </span>
 
-          {/* Notifications Dropdown */}
           {isNotificationsOpen && (
             <div className="absolute right-0 mt-3 w-64 bg-white shadow-lg rounded-lg p-4">
               <h3 className="text-gray-800 font-semibold">Notifications</h3>

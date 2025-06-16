@@ -22,7 +22,7 @@ const PaymentSubscriptions = () => {
   ]);
 
   const handleUpgrade = () => {
-    router.push("/
+    router.push("/")
   };
 
   const handleAddPaymentMethod = () => {

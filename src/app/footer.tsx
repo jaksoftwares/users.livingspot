@@ -1,3 +1,5 @@
+"use client";
+import React from 'react';
 const Footer = () => {
     return (
       <footer className="bg-white shadow-md p-4 flex flex-col md:flex-row justify-between items-center text-gray-600 text-sm">
